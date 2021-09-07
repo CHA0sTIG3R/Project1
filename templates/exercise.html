@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{%block head%}Make Plans{%endblock head%}
+{%block main%}
+    <div id="days">
+        <form action="/exercise" method="POST">
+            <h4>Enter Days in the week:</h4>
+            <p><input type="text" id="days_input" name="days"></p>
+            <h4>Enter exercises:</h4>
+            <input type="text" id="exerc" name="workout">
+            <input type="submit" value="submit">
+        </form>
+    </div>
+{%endblock main%}

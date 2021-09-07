@@ -1,0 +1,40 @@
+#body{
+    margin: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar h1{
+    color: aliceblue;
+}
+
+table, tr, th, td{
+    border: 1px solid black;
+}
+
+table{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.actions{
+    display: flex;
+}
+
+.actions a{
+    text-decoration: none;
+    border-radius: 50px;
+    padding: 5px 8px;
+}
+
+.upd{
+    border: 1px solid #004186;
+    color: #004186;
+}
+.del{
+    border: 1px solid #860000;
+    color: #d81507;
+}

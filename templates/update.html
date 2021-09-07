@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{%block head%}Update Plans{%endblock head%}
+{% block main %}
+<div id="days">
+    <form action="/update/{{plan.id}}" method="POST">
+        <h4>Update Days:</h4>
+        <p><input type="text" id="days_input" name="days" value="{{plan.days}}"></p>
+        <h4>Update exercises:</h4>
+        <input type="text" id="exerc" name="workout" value="{{plan.workout}}">
+        <input type="submit" value="Update">
+    </form>
+</div>
+{% endblock %}

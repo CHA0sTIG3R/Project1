@@ -1,0 +1,31 @@
+{%extends 'base.html' %}
+{%block head%}Gym Plans{%endblock head%}
+
+{%block main%}
+{% if plans|length < 1 %}
+<h2> There are no plans. Create one <a href="{{url_for('exerc')}}">here!</a></h2>
+
+{% else %}
+<table>
+    <tr>
+        <th>Days</th>
+        <th>Exercises</th>
+        <th>Actions</th>
+    </tr>
+    {% for plan in plans %}
+    <tr>
+        <td>{{ plan.days }}</td>
+        <td>{{ plan.workout }}</td>
+        <td>
+            <div class="actions">
+            <a class="del" href="/delete/{{plan.id}}">Delete</a>
+            <br>
+            <a class="upd" href="/update/{{plan.id}}">Update</a>
+            </div>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<h3><a href="{{url_for('exerc')}}">Add Plans</a></h3>
+{% endif %}
+{%endblock main%}
